@@ -13,10 +13,10 @@ class MyWindow(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
         self.ui.pushButton.clicked.connect(self.btnClicked)
 
-    #
-    # def unfade(self):
-    #     self.ui.pushButton.setStyleSheet("border-radius: 70%; background: #404040; margin: 10px; color: white;")
-    #
+    
+    def unfade(self):
+        self.ui.pushButton.setStyleSheet("border-radius: 70%; background: #404040; margin: 10px; color: white;")
+    
     def btnClicked(self):
         print(path.abspath(getcwd()))
         subprocess.Popen([sys.executable, "server.py"])
